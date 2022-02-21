@@ -30,5 +30,21 @@ document.getElementById('key-pad').addEventListener('click', function(event){
         yourPinId.value = newNumber;
     }
     
-    
 })
+
+// submit
+function submitButton(){
+    const autoPin = document.getElementById('display-pin');
+    const inputPin = document.getElementById('your-pin');
+    const falsePin = document.getElementById('false-pin');
+    const truePin = document.getElementById('true-pin');
+    if(autoPin.value == inputPin.value){
+        truePin.style.display = 'block';
+        falsePin.style.display = 'none';
+    }
+    else{
+        falsePin.style.display = 'block';
+        truePin.style.display = 'none';
+
+    }
+}
